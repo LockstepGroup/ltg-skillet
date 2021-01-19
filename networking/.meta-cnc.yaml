@@ -1,0 +1,31 @@
+# this skillet covers the basic network settings used by ltg
+
+# snippet folder name
+name: ltg_networking_common_settings_c209d9a6-0e52-4de7-9f17-b7dc382da697
+# label used for menu selection
+label: LTG common network settings
+description: |
+  Setup common network settings per LTG standards, just zones right now.
+# type of device configuration
+type: panorama
+
+# grouping of like snippets for dynamic menu creation in pan-cnc
+labels:
+  collection:
+    - ltg
+
+# variables used in the configuration templates
+# type_hint defines the form field type in pan-cnc
+variables:
+  - name: template_name
+    description: template name
+    default: template_name
+    type_hint: text
+    help_text: this is an unused clonable template with shared attributes for reference
+
+# snippets used for api configuration including xpath and element as file name
+# files will load in the order listed
+snippets:
+  - name: shared_template
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template
+    file: template.xml
