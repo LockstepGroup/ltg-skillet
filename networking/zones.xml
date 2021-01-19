@@ -19,11 +19,6 @@
                   <layer3/>
                 </network>
               </entry>
-              <entry name="l3_wan">
-                <network>
-                  <layer3/>
-                </network>
-              </entry>
               <entry name="l3_vendor">
                 <network>
                   <layer3/>
