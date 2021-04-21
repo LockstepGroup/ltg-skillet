@@ -44,6 +44,7 @@ variables:
 
 - name: threat_prevention
     description: Threat Prevention?
+    default:
     type_hint: checkbox
 
 # snippets used for api configuration including xpath and element as file name
