@@ -1,13 +1,13 @@
 # this skillet covers the basic network settings used by ltg
 
 # snippet folder name
-name: ltg_delete_defaults
+name: ltg_networking_common_settings_c209d9a6-0e52-4de7-9f17-b7dc382da697
 # label used for menu selection
-label: Remove default configs
+label: LTG common network settings
 description: |
-  Remove the default Security Policy/Vwire/Zones/Virtutal Router.
+  Setup common network settings per LTG standards, just zones right now.
 # type of device configuration
-type: panos
+type: panorama
 
 # grouping of like snippets for dynamic menu creation in pan-cnc
 labels:
@@ -16,10 +16,35 @@ labels:
 
 # variables used in the configuration templates
 # type_hint defines the form field type in pan-cnc
+variables:
+  - name: template_name
+    description: template name
+    default: ltg-skillet
+    type_hint: text
+    help_text: this is an unused clonable template with shared attributes for reference
+
+  - name: pa_model
+    description: Palo Alto Model
+    default: 'PA-220'
+    type_hint: dropdown
+    dd_list:
+      - key: 'PA-220'
+        value: 'pa_220'
+      - key: 'PA-820'
+        value: 'pa_820'
+      - key: 'PA-850'
+        value: 'pa_850'
+
+  - name: eth1_1_ip
+    description: ethernet1/1
+    type_hint: cidr
+    toggle_hint:
+      source: pa_model
+      value: pa_220
 
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
-  - name: virtual_router
-    cmd: delete
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router/entry[@name='default']
+  - name: zones
+    xpath: /config/devices/entry[@name='localhost.localdomain']/template
+    file: zones.xml
