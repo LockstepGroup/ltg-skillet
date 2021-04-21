@@ -35,6 +35,12 @@ variables:
       - key: 'PA-850'
         value: 'pa_850'
 
+  - name: eth1_1_ip
+    description: ethernet1/1
+    type_hint: cidr
+    toggle_hint:
+      source: pa_model
+      value: pa_220
 
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
