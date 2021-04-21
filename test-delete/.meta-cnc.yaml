@@ -20,24 +20,6 @@ labels:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
-  - name: rule1
-    cmd: delete
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules/entry[@name='rule1']
-  - name: default_vwire
-    cmd: delete
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-wire/entry[@name='default-vwire']
-  - name: zone_trust
-    cmd: delete
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone/entry[@name='trust']
-  - name: zone_untrust
-    cmd: delete
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/zone/entry[@name='untrust']
-  - name: interface_eth1_1
-    cmd: delete
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet/entry[@name='ethernet1/1']
-  - name: interface_eth1_2
-    cmd: delete
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/interface/ethernet/entry[@name='ethernet1/2']
   - name: virtual_router
     cmd: delete
     xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router/entry[@name='default']
