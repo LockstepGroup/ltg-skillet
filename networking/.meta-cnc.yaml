@@ -28,12 +28,12 @@ variables:
     default: 'PA-220'
     type_hint: dropdown
     dd_list:
-      - key: 'pa_220'
-        value: 'PA-220'
-      - key: 'pa_820'
-        value: 'PA-820'
-      - key: 'pa_850'
-        value: 'PA-850'
+      - key: 'PA-220'
+        value: 'pa_220'
+      - key: 'PA-820'
+        value: 'pa_820'
+      - key: 'PA-850'
+        value: 'pa_850'
 
 
 # snippets used for api configuration including xpath and element as file name
