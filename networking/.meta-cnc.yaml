@@ -42,6 +42,10 @@ variables:
       source: pa_model
       value: pa_220
 
+- name: threat_prevention
+    description: Threat Prevention?
+    type_hint: checkbox
+
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
