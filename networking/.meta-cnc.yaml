@@ -22,4 +22,4 @@ labels:
 snippets:
   - name: virtual_router
     cmd: delete
-    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router/entry[@name='test-router']
+    xpath: /config/devices/entry[@name='localhost.localdomain']/network/virtual-router/entry[@name='default']
