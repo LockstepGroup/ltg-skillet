@@ -6,50 +6,24 @@
   <config>
     <devices>
       <entry name="localhost.localdomain">
-        <vsys>
-          <entry name="vsys1">
-            <zone>
-              <entry name="l3_public">
-                <network>
-                  <layer3/>
-                </network>
+        <network>
+          <profiles>
+            <interface-management-profile>
+              <entry name="ping-only">
+                <ping>yes</ping>
               </entry>
-              <entry name="l3_dmz">
-                <network>
-                  <layer3/>
-                </network>
+              <entry name="ping-and-response">
+                <ping>yes</ping>
+                <response-pages>yes</response-pages>
               </entry>
-              <entry name="l3_vendor">
-                <network>
-                  <layer3/>
-                </network>
+              <entry name="full-mgmt">
+                <https>yes</https>
+                <ssh>yes</ssh>
+                <ping>yes</ping>
               </entry>
-              <entry name="l3_partner">
-                <network>
-                  <layer3/>
-                </network>
-              </entry>
-              <entry name="l3_guest">
-                <network>
-                  <layer3/>
-                </network>
-              </entry>
-              <entry name="l3_lan">
-                <network>
-                  <layer3/>
-                </network>
-                <enable-user-identification>yes</enable-user-identification>
-              </entry>
-              <entry name="l3_wan">
-                <network>
-                  <layer3/>
-                </network>
-                <enable-user-identification>yes</enable-user-identification>
-              </entry>
-            </zone>
-          </entry>
-        </vsys>
-      </entry>
-    </devices>
-  </config>
-</entry>
+            </interface-management-profile>
+          </profiles>
+        </network>
+      </devices>
+    </config>
+  </entry>

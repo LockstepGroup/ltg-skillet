@@ -1,0 +1,61 @@
+<entry name="{{ template_name }}">
+  <description>topology or site type recommended template elements</description>
+  <settings>
+    <default-vsys>vsys1</default-vsys>
+  </settings>
+  <config>
+    <devices>
+      <entry name="localhost.localdomain">
+        <vsys>
+          <entry name="vsys1">
+            <zone>
+              <entry name="l3_public">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="l3_dmz">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="l3_vendor">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="l3_partner">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="l3_guest">
+                <network>
+                  <layer3/>
+                </network>
+              </entry>
+              <entry name="l3_lan">
+                <network>
+                  <layer3/>
+                </network>
+                <enable-user-identification>yes</enable-user-identification>
+              </entry>
+              <entry name="l3_wan">
+                <network>
+                  <layer3/>
+                </network>
+                <enable-user-identification>yes</enable-user-identification>
+              </entry>
+              <entry name="l3_globalprotect">
+                <network>
+                  <layer3/>
+                </network>
+                <enable-user-identification>yes</enable-user-identification>
+              </entry>
+            </zone>
+          </entry>
+        </vsys>
+      </entry>
+    </devices>
+  </config>
+</entry>

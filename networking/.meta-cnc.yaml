@@ -19,9 +19,22 @@ labels:
 variables:
   - name: template_name
     description: template name
-    default: template_name
+    default: ltg-skillet
     type_hint: text
     help_text: this is an unused clonable template with shared attributes for reference
+
+  - name: pa_model
+    description: Palo Alto Model
+    default: 'PA-220'
+    type_hint: dropdown
+    dd_list:
+      - key: 'pa_220'
+        value: 'PA-220'
+      - key: 'pa_820'
+        value: 'PA-820'
+      - key: 'pa_850'
+        value: 'PA-850'
+
 
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
